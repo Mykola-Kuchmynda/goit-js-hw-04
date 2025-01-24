@@ -2,8 +2,10 @@ function calcAverageCalories(days) {
     let calcCalories = 0;
     let averageCalories = 0;
     for (let day of days) {
-        calcCalories += day.calories;
-        averageCalories = calcCalories / days.length;
+        if (days.length != 0) {
+            calcCalories += day.calories;
+            averageCalories = calcCalories / days.length;
+        }
     }
     return averageCalories;
 }
